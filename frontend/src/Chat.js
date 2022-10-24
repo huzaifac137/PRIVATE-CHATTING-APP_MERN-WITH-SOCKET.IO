@@ -160,7 +160,6 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
                 key={Math.random() * Math.random()*Math.random()}  >
                      
                     <div className='message-content'>
-                     <h3 className='name'>{item.authorName}</h3>
 
                      <div style={{display:"flex" , justifyContent:"space-between" }}>
                      <h3> {item.message} </h3> 
