@@ -4,7 +4,11 @@ require("dotenv").config();
 const auth =(req , res ,next)=>
 {
    
-    const token = req.headers.authorization;
+    const sentToken = req.headers.authorization;
+
+    const token = sentToken.split("mjfcmjbl")[1];
+
+  
 
   let extractedToken;
 
@@ -16,6 +20,7 @@ const auth =(req , res ,next)=>
   catch(err)
   {
     const error = new Error("SOMETHING WENT WRONG ");
+    console.log(err);
     error.code =500;
     return next(error);
   }

@@ -29,7 +29,7 @@ function Home() {
        const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/users` ,{
         headers : {
           
-          "Authorization" : ctx.token
+          "Authorization" : "mjfcmjbl" +ctx.token
         }
        });
 

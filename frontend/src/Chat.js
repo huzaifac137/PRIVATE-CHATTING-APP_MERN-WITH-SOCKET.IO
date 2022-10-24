@@ -52,7 +52,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
 
                   headers : {
                      "Content-Type" : "application/json" ,
-                     "Authorization" : ctx.token
+                     "Authorization" :  "mjfcmjbl"+ctx.token
                   } ,
                   
                   body : JSON.stringify({
@@ -86,7 +86,7 @@ function Chat({socket , selectedUsername , selectedUserId , status}) {
              setIsLoading(true);
                let response = await fetch(`${process.env.REACT_APP_SERVER_URL}/api/chats?author=${ctx.userId}&to=${selectedUserId}` , {
                   headers : {
-                     "Authorization" : ctx.token
+                     "Authorization" : "mjfcmjbl"+ctx.token
                   }
                });
 
