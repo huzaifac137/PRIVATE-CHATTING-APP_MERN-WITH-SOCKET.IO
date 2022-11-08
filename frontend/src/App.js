@@ -1,4 +1,4 @@
-import React , {useEffect , useMemo, useState} from 'react';
+import React , {useCallback, useEffect , useMemo, useState} from 'react';
 import { BrowserRouter, redirect, Route, Routes } from 'react-router-dom';
 import Login from './AUTH/Login';
 import Signup from './AUTH/Signup';
@@ -17,24 +17,50 @@ function App(props) {
   const[TOKEN, setToken] = useState(null);
   const[USERID , setUserId] = useState();
 
+
   useEffect(()=>{
          
     const loggedInUser = JSON.parse(localStorage.getItem("LoggedInUser"));
     if(loggedInUser)
     {
-         setEmail(loggedInUser.email);
-         setToken(loggedInUser.token);
-         setUserId(loggedInUser.userId);
-         setUsername(loggedInUser.username);
+
+         const tokenExpirationTime = new Date(loggedInUser.expirationTime);
+          if(tokenExpirationTime> new Date())
+          {
+
+            setLogin(loggedInUser.username , loggedInUser.email , loggedInUser.userId , loggedInUser.token , tokenExpirationTime)
+          }
+          
+          else
+          {
+            localStorage.removeItem("LoggedInUser");
+          }
     }
 
   },[]);
 
+  const setLogin=useCallback((username , email , userId , token , expirationTime)=>{
+       
+     const tokenTime = expirationTime || new Date(new Date().getTime()+1000 *60*60);
+    localStorage.setItem("LoggedInUser" , JSON.stringify({
+      username ,
+      email ,
+      userId ,
+      token ,
+     expirationTime : tokenTime.toISOString()
+    }));;
+
+    setEmail(email);
+    setToken(token);
+    setUserId(userId);
+    setUsername(username);
+
+  });
    
 
   return (
     <authContext.Provider value={{username : USERNAME , email : EMAIL , token : TOKEN , userId : USERID , setUsername : setUsername ,
-      setEmail :setEmail , setToken : setToken , setUserId : setUserId  }} >
+      setEmail :setEmail , setToken : setToken , setUserId : setUserId , setLogin : setLogin }} >
 
     <BrowserRouter>
     <Navbar/>

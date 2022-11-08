@@ -64,13 +64,8 @@ function Login(props) {
         ctx.setToken(token);
         ctx.setUserId(userId);
 
-      localStorage.setItem("LoggedInUser" , JSON.stringify({
-        username ,
-        email ,
-        userId ,
-        token
-      }));
-
+          ctx.setLogin(username , email , userId , token);
+          
         navigate("/"  , {replace:true}  );
         setResponseMsg(responseData.message);
     }

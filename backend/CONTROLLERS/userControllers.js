@@ -166,7 +166,7 @@ const login = async(req , res , next)=>{
 
       try
       {
-        token =  jwt.sign({userId : emailExists.id  , username : emailExists.username} , process.env.JWT_KEY, {});
+        token =  jwt.sign({userId : emailExists.id  , username : emailExists.username} , process.env.JWT_KEY, {expiresIn:"1h"});
       }
 
       catch(err)
