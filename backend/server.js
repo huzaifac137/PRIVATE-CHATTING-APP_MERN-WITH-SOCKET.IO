@@ -11,7 +11,7 @@ const auth = require("./Auth");
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ credentials: true, origin: process.env.CLIENT_URL }));
+app.use(cors({ credentials: true, origin: true }));
 
 const CHAT = require("./MODELS/Chat");
 
