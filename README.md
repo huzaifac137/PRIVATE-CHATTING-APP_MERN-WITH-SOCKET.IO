@@ -1,15 +1,15 @@
 # REALTIME-PRIVATE-CHATTING-APP_MERN-WITH-SOCKET.IO
 
 
-`This app is now live `
+#`This app is now live `
 https://huzaifac137chattigapp.onrender.com
 
-`npm install`
+#`npm install`
 
 Do this in frontend folder so project can install all required dependencies . Backend already has dependecies included here.
 
 
-` .env File`
+#` .env File`
 
 Include your own .env file with the same variable names as in my code to run the code properly
 
@@ -20,7 +20,7 @@ Include your own .env file with the same variable names as in my code to run the
  4) All Convos stored in MongoDb database
  5) User active status (online , offline).
 
-`Details about this app` 
+#`Details about this app` 
 
 This is a private one to one chatting app in which you can :
 
