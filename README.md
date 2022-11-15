@@ -1,7 +1,7 @@
 # REALTIME-PRIVATE-CHATTING-APP_MERN-WITH-SOCKET.IO
 
 
-#`This app is now live `
+# This app is now live 
 https://huzaifac137chattigapp.onrender.com
 
 #`npm install`
