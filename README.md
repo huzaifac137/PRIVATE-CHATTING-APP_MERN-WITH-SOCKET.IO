@@ -4,16 +4,16 @@
 # This app is now live 
 https://huzaifac137chattigapp.onrender.com
 
-#`npm install`
+`npm install`
 
 Do this in frontend folder so project can install all required dependencies . Backend already has dependecies included here.
 
 
-#` .env File`
+` .env File`
 
 Include your own .env file with the same variable names as in my code to run the code properly
 
-`KEY Features`
+#KEY Features
  1) User Login and Signup
  2) Authentication and authorization using refresh and access token practice (JWT , httpOnly )
  3) Realtime Messaging using socket.io
