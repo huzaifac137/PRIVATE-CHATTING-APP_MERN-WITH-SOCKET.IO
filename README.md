@@ -1,7 +1,7 @@
 # REALTIME-PRIVATE-CHATTING-APP_MERN-WITH-SOCKET.IO
 
 
-`This app is now live `
+# This app is now live 
 https://huzaifac137chattigapp.onrender.com
 
 `npm install`
@@ -13,14 +13,14 @@ Do this in frontend folder so project can install all required dependencies . Ba
 
 Include your own .env file with the same variable names as in my code to run the code properly
 
-`KEY Features`
+# KEY Features
  1) User Login and Signup
  2) Authentication and authorization using refresh and access token practice (JWT , httpOnly )
  3) Realtime Messaging using socket.io
  4) All Convos stored in MongoDb database
  5) User active status (online , offline).
 
-`Details about this app` 
+#`Details about this app` 
 
 This is a private one to one chatting app in which you can :
 
