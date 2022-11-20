@@ -5,6 +5,8 @@ import Chat from "./Chat";
 import { io } from "socket.io-client";
 import authContext from "./CONTEXT/AuthContext";
 import Navbar from "./COMPONENTS/Navbar";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Home() {
   const navigate = useNavigate();
@@ -62,6 +64,12 @@ function Home() {
     });
   }, []);
 
+  useEffect(() => {
+    socket.current.on("notification", (data) => {
+      toast.success(data.authorName + ` : ${data.message}  `);
+    });
+  }, []);
+
   const handleClick = (userId, username) => {
     setSelectedUserId(userId);
     setSelectedUsername(username);
@@ -100,6 +108,7 @@ function Home() {
           selectedUsername={selectedUsername}
         />
       )}
+      <ToastContainer />
     </div>
   );
 }

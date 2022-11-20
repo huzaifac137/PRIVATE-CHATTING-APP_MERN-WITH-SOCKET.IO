@@ -11,7 +11,7 @@ const auth = require("./Auth");
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({ credentials: true, origin: true  }));
+app.use(cors({ credentials: true, origin: true }));
 
 const CHAT = require("./MODELS/Chat");
 
@@ -91,6 +91,7 @@ io.on("connection", (socket) => {
       console.log(user);
 
       io.to(user.socketId).emit("recieve-msg", dataa);
+      io.to(user.socketId).emit("notification", data);
     }
   });
 
@@ -116,17 +117,17 @@ io.on("connection", (socket) => {
   });
 });
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URL);
-    console.log("MONGOOSE CONNECTED");
-  } catch (err) {
-    console.log("ERROR" + " " + err);
-  }
-};
-
-connectDB();
-
 serverr.listen(process.env.PORT, () => {
   console.log("SERVER RUNNING");
+
+  const connectDB = async () => {
+    try {
+      await mongoose.connect(process.env.MONGO_URL);
+      console.log("MONGOOSE CONNECTED");
+    } catch (err) {
+      console.log("ERROR" + " " + err);
+    }
+  };
+
+  connectDB();
 });
