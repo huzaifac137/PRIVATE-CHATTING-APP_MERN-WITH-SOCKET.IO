@@ -19,6 +19,7 @@ Include your own .env file with the same variable names as in my code to run the
  3) Realtime Messaging using socket.io
  4) All Convos stored in MongoDb database
  5) User active status (online , offline).
+ 6) In-app message notifications with sender name and message.
 
 #`Details about this app` 
 
