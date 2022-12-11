@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import authContext from "../CONTEXT/AuthContext";
+import ExampleModal from "./Modal";
 
 function Navbar({ socket }) {
   const ctx = useContext(authContext);
@@ -36,11 +37,7 @@ function Navbar({ socket }) {
         )}
       </div>
 
-      {ctx.token && (
-        <button className="btn-danger" onClick={handleLogout}>
-          LOGOUT
-        </button>
-      )}
+      {ctx.token && <ExampleModal confirmLogout={handleLogout} />}
     </div>
   );
 }

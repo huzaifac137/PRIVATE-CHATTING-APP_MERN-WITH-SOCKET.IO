@@ -1,36 +1,32 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.App
-{
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
 
-input
-{
+input {
   width: 40%;
   height: 50px;
   border-color: green;
   margin-bottom: 20px;
 }
 
-
-.chat
-{
+.chat {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,16 +37,13 @@ input
   margin: 50px auto;
 }
 
-
-.chat-header
-{
+.chat-header {
   background-color: gray;
   width: 100%;
   text-align: center;
 }
 
-.chat-footer
-{
+.chat-footer {
   width: 100%;
   display: flex;
   align-self: flex-end;
@@ -58,49 +51,41 @@ input
   height: 30px;
 }
 
-.chat-footer input
-{
+.chat-footer input {
   width: 90%;
   height: 95%;
   border: none;
 }
 
-.chat-footer button
-{
+.chat-footer button {
   border: 1px solid grey;
-  height: 100%; 
+  height: 100%;
   background-color: lightgreen;
   border-radius: 0;
 }
 
-.chat-body
-{
+.chat-body {
   width: 100%;
   display: flex;
   flex-direction: column;
   height: 500px;
-  
 }
 
-.scroll
-{
+.scroll {
   width: 100%;
   height: 100%;
 }
 
-.scrollbar
-{
+.scrollbar {
   overflow-x: hidden;
 }
 
-#message
-{
-   display: flex;
-   width: 100%;
+#message {
+  display: flex;
+  width: 100%;
 }
 
-.you .message-content
-{
+.you .message-content {
   padding: 5px;
   max-width: 70%;
   background-color: rgb(103, 224, 103);
@@ -110,56 +95,44 @@ input
   white-space: pre-wrap;
 }
 
-.other .message-content
-{
+.other .message-content {
   padding: 5px;
   max-width: 70%;
-  background-color:rgb(182, 180, 180);
+  background-color: rgb(182, 180, 180);
   margin: 10px;
   border-radius: 10px;
   word-wrap: break-word;
   white-space: pre-wrap;
 }
 
-.message-content
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.message-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-.you 
-{
-
+.you {
   justify-content: flex-end;
 }
 
-.other
-{
+.other {
   justify-content: flex-start;
-
 }
 
-#message h3
-{
+#message h3 {
   margin-left: 5px;
 }
 
-  .name
-{
-border-bottom: 1px solid grey;
-width: fit-content;
+.name {
+  border-bottom: 1px solid grey;
+  width: fit-content;
 }
 
-.message-content h5 
-{
+.message-content h5 {
   text-align: end;
 }
 
-
-.auth
-{
+.auth {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,8 +143,7 @@ width: fit-content;
   border: 1px solid grey;
 }
 
-.input
-{
+.input {
   width: 65%;
   height: 35px;
   border-radius: 2px;
@@ -181,8 +153,7 @@ width: fit-content;
   border-bottom: 1px solid grey;
 }
 
-.invalid
-{
+.invalid {
   width: 65%;
   height: 35px;
   border-radius: 2px;
@@ -192,32 +163,58 @@ width: fit-content;
   border-bottom: 1px solid red;
 }
 
-.btn-danger
-{
+.btn-danger {
   background-color: rgb(204, 29, 29);
   color: white;
   border: none;
   border-radius: 5px;
-  
 }
 
+.modal {
+  /* Style the modal background */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Position the modal */
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  margin: 0 auto;
+  /* Set the modal width and height */
+  width: 100vw;
+  height: 100vh;
+  /* Style the modal content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.navlinks a
-{
+.modal button {
+  margin: 20px;
+  background-color: rgba(68, 68, 53, 0.596);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+}
+
+.modal button:first-of-type {
+  background-color: rgb(204, 29, 29);
+}
+
+.navlinks a {
   text-decoration: none;
   color: gray;
   font-size: larger;
   padding: 5px;
 }
 
-.navlinks a.active
-{
+.navlinks a.active {
   border-bottom: 1px solid black;
   color: black;
 }
 
-.user
-{
+.user {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,178 +229,136 @@ width: fit-content;
   min-width: 150px;
 }
 
-.user:active
-{
+.user:active {
   background-color: transparent;
   border: 1px solid skyblue;
 }
 
-.userContainer
-{
-  margin:30px;
+.userContainer {
+  margin: 30px;
   display: flex;
   align-items: center;
   width: 90%;
   overflow-x: auto;
 }
 
-.totalContainer
-{
+.totalContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-@media only screen and (max-width : 850px)
-{
-
-  .chat h3
-  {
+@media only screen and (max-width: 850px) {
+  .chat h3 {
     font-size: 16px;
   }
 
-  .chat h5
-  {
+  .chat h5 {
     font-size: 10px;
   }
 
-  .userContainer
-{
-  margin:30px;
+  .userContainer {
+    margin: 30px;
+  }
+
+  .chat {
+    width: 80%;
+    max-width: 85%;
+  }
 }
 
-.chat
-{
-  width: 80%;
-  max-width: 85%;
-}
-
-}
-
-@media only screen and (max-width : 730px)
-{
-
-  .message-content
-  {
+@media only screen and (max-width: 730px) {
+  .message-content {
     max-width: 90%;
   }
 
-  .chat
-  {
+  .chat {
     width: 95%;
     max-width: 100%;
   }
 
-  .userContainer
-{
-  margin:20px;
-}
+  .userContainer {
+    margin: 20px;
+  }
 
-  .chat h3
-  {
+  .chat h3 {
     font-size: 14px;
   }
 
-  .chat h5
-  {
+  .chat h5 {
     font-size: 10px;
   }
 
+  .user h3 {
+    font-size: 14px;
+  }
 
-.user h3
-{
-  font-size: 14px;
-}
+  .user h4 {
+    font-size: 11px;
+  }
 
-.user h4
-{
-  font-size: 11px;
-}
-
-  .message-content
-  {
+  .message-content {
     max-width: 90%;
   }
 
-  .chat
-  {
+  .chat {
     max-width: 95%;
   }
-
 }
 
-
-@media only screen and (max-width : 510px)
-{
-
-  .totalContainer
-  {
+@media only screen and (max-width: 510px) {
+  .totalContainer {
     width: 100%;
   }
 
-  .message-content
-  {
+  .message-content {
     max-width: 95%;
   }
 
-  .chat
-  {
+  .chat {
     max-width: 100%;
   }
 
-  .userContainer
-  {
-    margin:5px;
+  .userContainer {
+    margin: 5px;
   }
 
-  .userContainer h3
-  {
-     font-size: 10px;
+  .userContainer h3 {
+    font-size: 10px;
   }
 
-  .userContainer h5
-  {
+  .userContainer h5 {
     font-size: 7px;
   }
 
-  .chat h3
-  {
+  .chat h3 {
     font-size: 13px;
   }
 
-  .chat h5
-  {
+  .chat h5 {
     font-size: 8px;
   }
 
-  .userContainer
-  {
-      max-width: 70%;
-      margin-left: 10px;
+  .userContainer {
+    max-width: 70%;
+    margin-left: 10px;
   }
 
-  .user
-  {
-    width:70px;
+  .user {
+    width: 70px;
     height: 70px;
-    
   }
 
-.user h3
-{
-  font-size: 11px;
-}
+  .user h3 {
+    font-size: 11px;
+  }
 
-.user h4
-{
-  font-size: 9px;
-}
+  .user h4 {
+    font-size: 9px;
+  }
 
-  .chat
-  {
+  .chat {
     width: 90%;
     max-width: 98%;
   }
-
-
 }

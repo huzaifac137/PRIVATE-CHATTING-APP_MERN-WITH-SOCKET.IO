@@ -135,7 +135,7 @@ function Chat({ socket, selectedUsername, selectedUserId, status }) {
       ) : (
         <>
           <div className="chat-header">
-            <h3> {selectedUsername} </h3>
+            <h3> {selectedUsername}</h3>
           </div>
           <div className="chat-body">
             <ScrollToBottom
